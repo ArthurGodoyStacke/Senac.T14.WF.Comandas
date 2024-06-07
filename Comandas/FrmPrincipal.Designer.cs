@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             gpxPrincipal = new GroupBox();
-            btnCardapio = new ReaLTaiizor.Controls.MaterialButton();
-            btnComanda = new ReaLTaiizor.Controls.MaterialButton();
+            btnUsuarios = new ReaLTaiizor.Controls.MaterialButton();
             btnPedidoCozinha = new ReaLTaiizor.Controls.MaterialButton();
-            btnUsuario = new ReaLTaiizor.Controls.MaterialButton();
+            btnComanda = new ReaLTaiizor.Controls.MaterialButton();
+            btnCardapio = new ReaLTaiizor.Controls.MaterialButton();
             gpxPrincipal.SuspendLayout();
             SuspendLayout();
             // 
             // gpxPrincipal
             // 
-            gpxPrincipal.Controls.Add(btnUsuario);
+            gpxPrincipal.Controls.Add(btnUsuarios);
             gpxPrincipal.Controls.Add(btnPedidoCozinha);
             gpxPrincipal.Controls.Add(btnComanda);
             gpxPrincipal.Controls.Add(btnCardapio);
@@ -48,45 +48,26 @@
             gpxPrincipal.TabIndex = 0;
             gpxPrincipal.TabStop = false;
             // 
-            // btnCardapio
+            // btnUsuarios
             // 
-            btnCardapio.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnCardapio.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnCardapio.Depth = 0;
-            btnCardapio.HighEmphasis = true;
-            btnCardapio.Icon = null;
-            btnCardapio.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnCardapio.Location = new Point(7, 45);
-            btnCardapio.Margin = new Padding(4, 6, 4, 6);
-            btnCardapio.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            btnCardapio.Name = "btnCardapio";
-            btnCardapio.NoAccentTextColor = Color.Empty;
-            btnCardapio.Size = new Size(93, 36);
-            btnCardapio.TabIndex = 0;
-            btnCardapio.Text = "Cardápio";
-            btnCardapio.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnCardapio.UseAccentColor = false;
-            btnCardapio.UseVisualStyleBackColor = true;
-            // 
-            // btnComanda
-            // 
-            btnComanda.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnComanda.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnComanda.Depth = 0;
-            btnComanda.HighEmphasis = true;
-            btnComanda.Icon = null;
-            btnComanda.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnComanda.Location = new Point(7, 93);
-            btnComanda.Margin = new Padding(4, 6, 4, 6);
-            btnComanda.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            btnComanda.Name = "btnComanda";
-            btnComanda.NoAccentTextColor = Color.Empty;
-            btnComanda.Size = new Size(94, 36);
-            btnComanda.TabIndex = 1;
-            btnComanda.Text = "Comanda";
-            btnComanda.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnComanda.UseAccentColor = false;
-            btnComanda.UseVisualStyleBackColor = true;
+            btnUsuarios.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnUsuarios.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnUsuarios.Depth = 0;
+            btnUsuarios.HighEmphasis = true;
+            btnUsuarios.Icon = null;
+            btnUsuarios.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnUsuarios.Location = new Point(7, 189);
+            btnUsuarios.Margin = new Padding(4, 6, 4, 6);
+            btnUsuarios.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnUsuarios.Name = "btnUsuarios";
+            btnUsuarios.NoAccentTextColor = Color.Empty;
+            btnUsuarios.Size = new Size(91, 36);
+            btnUsuarios.TabIndex = 3;
+            btnUsuarios.Text = "Usuários";
+            btnUsuarios.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnUsuarios.UseAccentColor = false;
+            btnUsuarios.UseVisualStyleBackColor = true;
+            btnUsuarios.Click += btnUsuario_Click;
             // 
             // btnPedidoCozinha
             // 
@@ -107,26 +88,49 @@
             btnPedidoCozinha.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnPedidoCozinha.UseAccentColor = false;
             btnPedidoCozinha.UseVisualStyleBackColor = true;
+            btnPedidoCozinha.Click += btnPedidoCozinha_Click;
             // 
-            // btnUsuario
+            // btnComanda
             // 
-            btnUsuario.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnUsuario.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnUsuario.Depth = 0;
-            btnUsuario.HighEmphasis = true;
-            btnUsuario.Icon = null;
-            btnUsuario.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnUsuario.Location = new Point(7, 189);
-            btnUsuario.Margin = new Padding(4, 6, 4, 6);
-            btnUsuario.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            btnUsuario.Name = "btnUsuario";
-            btnUsuario.NoAccentTextColor = Color.Empty;
-            btnUsuario.Size = new Size(158, 36);
-            btnUsuario.TabIndex = 3;
-            btnUsuario.Text = "Usuários";
-            btnUsuario.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnUsuario.UseAccentColor = false;
-            btnUsuario.UseVisualStyleBackColor = true;
+            btnComanda.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnComanda.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnComanda.Depth = 0;
+            btnComanda.HighEmphasis = true;
+            btnComanda.Icon = null;
+            btnComanda.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnComanda.Location = new Point(7, 93);
+            btnComanda.Margin = new Padding(4, 6, 4, 6);
+            btnComanda.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnComanda.Name = "btnComanda";
+            btnComanda.NoAccentTextColor = Color.Empty;
+            btnComanda.Size = new Size(94, 36);
+            btnComanda.TabIndex = 1;
+            btnComanda.Text = "Comanda";
+            btnComanda.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnComanda.UseAccentColor = false;
+            btnComanda.UseVisualStyleBackColor = true;
+            btnComanda.Click += btnComanda_Click;
+            // 
+            // btnCardapio
+            // 
+            btnCardapio.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnCardapio.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnCardapio.Depth = 0;
+            btnCardapio.HighEmphasis = true;
+            btnCardapio.Icon = null;
+            btnCardapio.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnCardapio.Location = new Point(7, 45);
+            btnCardapio.Margin = new Padding(4, 6, 4, 6);
+            btnCardapio.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnCardapio.Name = "btnCardapio";
+            btnCardapio.NoAccentTextColor = Color.Empty;
+            btnCardapio.Size = new Size(93, 36);
+            btnCardapio.TabIndex = 0;
+            btnCardapio.Text = "Cardápio";
+            btnCardapio.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnCardapio.UseAccentColor = false;
+            btnCardapio.UseVisualStyleBackColor = true;
+            btnCardapio.Click += btnCardapio_Click;
             // 
             // FrmPrincipal
             // 
@@ -144,7 +148,7 @@
         #endregion
 
         private GroupBox gpxPrincipal;
-        private ReaLTaiizor.Controls.MaterialButton btnUsuario;
+        private ReaLTaiizor.Controls.MaterialButton btnUsuarios;
         private ReaLTaiizor.Controls.MaterialButton btnPedidoCozinha;
         private ReaLTaiizor.Controls.MaterialButton btnComanda;
         private ReaLTaiizor.Controls.MaterialButton btnCardapio;
