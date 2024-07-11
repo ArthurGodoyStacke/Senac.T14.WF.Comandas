@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             btnVoltar = new ReaLTaiizor.Controls.CyberButton();
+            btnSalvar = new Button();
+            btnNovo = new Button();
+            btnExcluir = new Button();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
             // btnVoltar
@@ -72,11 +76,57 @@
             btnVoltar.Timer_RGB = 300;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // btnSalvar
+            // 
+            btnSalvar.BackColor = SystemColors.ActiveCaption;
+            btnSalvar.Location = new Point(332, 95);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(112, 34);
+            btnSalvar.TabIndex = 1;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
+            // 
+            // btnNovo
+            // 
+            btnNovo.BackColor = SystemColors.ActiveCaption;
+            btnNovo.Location = new Point(482, 217);
+            btnNovo.Name = "btnNovo";
+            btnNovo.Size = new Size(112, 34);
+            btnNovo.TabIndex = 2;
+            btnNovo.Text = "Novo";
+            btnNovo.UseVisualStyleBackColor = false;
+            btnNovo.Click += btnNovo_Click;
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.BackColor = SystemColors.ActiveCaption;
+            btnExcluir.Location = new Point(344, 208);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(112, 34);
+            btnExcluir.TabIndex = 3;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = SystemColors.ActiveCaption;
+            btnCancelar.Location = new Point(358, 283);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(112, 34);
+            btnCancelar.TabIndex = 4;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // FrmUsuario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnNovo);
+            Controls.Add(btnSalvar);
             Controls.Add(btnVoltar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuario";
@@ -88,5 +138,9 @@
         #endregion
 
         private ReaLTaiizor.Controls.CyberButton btnVoltar;
+        private Button btnSalvar;
+        private Button btnNovo;
+        private Button btnExcluir;
+        private Button btnCancelar;
     }
 }
