@@ -36,15 +36,16 @@ namespace Comandas
         private void atualizarUsuario()
         {
             using (var banco = new AppDbContext())
-            {
+            { // consulta um usuario na tabela usando o id da tela
                 var usuario = banco
                .Usuarios
-               .Where(e => e.Id == 1)
-
+               .Where(e => e.Id == int.Parse(txtId.TextButton) )
                .FirstOrDefault();
 
-                usuario.Nome = "Natasha";
-                usuario.Email = "nat@gmail.com";
+                usuario.Nome = txtNome.TextButton; ;
+                usuario.Email = txtEmail.TextButton;
+                usuario.Senha = txtSenha.TextButton;
+
                 banco.SaveChanges();
             }
 
@@ -58,6 +59,12 @@ namespace Comandas
             {
                 // criar um novo usuario
                 var novoUsuario = new Usuario();
+                novoUsuario.Nome = txtNome.TextButton;
+                novoUsuario.Email = txtNome.TextButton;
+                novoUsuario.Senha = txtNome.TextButton;
+                banco.Usuarios.Add(novoUsuario);
+                banco.SaveChanges();
+
                 // atribuimos as propriedades do usuário
                 novoUsuario.Nome = "Arthur";
                 novoUsuario.Email = "arthurgodoy@gmail.com";
@@ -80,5 +87,10 @@ namespace Comandas
         {
             ehNovo = true;
         }
+
+     
+
+       
+        
     }
 }
