@@ -38,11 +38,14 @@
             labelEdit3 = new ReaLTaiizor.Controls.LabelEdit();
             labelEdit2 = new ReaLTaiizor.Controls.LabelEdit();
             labelEdit1 = new ReaLTaiizor.Controls.LabelEdit();
+            txtId = new ReaLTaiizor.Controls.CyberTextBox();
             txtEmail = new ReaLTaiizor.Controls.CyberTextBox();
             txtSenha = new ReaLTaiizor.Controls.CyberTextBox();
             txtNome = new ReaLTaiizor.Controls.CyberTextBox();
-            txtId = new ReaLTaiizor.Controls.CyberTextBox();
+            dgvUsuarios = new DataGridView();
+            btnEditar = new Button();
             cyberGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             SuspendLayout();
             // 
             // btnVoltar
@@ -71,7 +74,7 @@
             btnVoltar.Lighting = false;
             btnVoltar.LinearGradient_Background = false;
             btnVoltar.LinearGradientPen = false;
-            btnVoltar.Location = new Point(186, 549);
+            btnVoltar.Location = new Point(899, 36);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.PenWidth = 15;
             btnVoltar.Rounding = true;
@@ -89,7 +92,7 @@
             // btnSalvar
             // 
             btnSalvar.BackColor = SystemColors.ActiveCaption;
-            btnSalvar.Location = new Point(507, 44);
+            btnSalvar.Location = new Point(526, 44);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(112, 34);
             btnSalvar.TabIndex = 1;
@@ -100,7 +103,7 @@
             // btnNovo
             // 
             btnNovo.BackColor = SystemColors.ActiveCaption;
-            btnNovo.Location = new Point(369, 44);
+            btnNovo.Location = new Point(263, 44);
             btnNovo.Name = "btnNovo";
             btnNovo.Size = new Size(112, 34);
             btnNovo.TabIndex = 2;
@@ -121,7 +124,7 @@
             // btnCancelar
             // 
             btnCancelar.BackColor = SystemColors.ActiveCaption;
-            btnCancelar.Location = new Point(226, 44);
+            btnCancelar.Location = new Point(762, 44);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(112, 34);
             btnCancelar.TabIndex = 4;
@@ -216,96 +219,6 @@
             labelEdit1.TabIndex = 6;
             labelEdit1.Text = "Id";
             // 
-            // txtEmail
-            // 
-            txtEmail.Alpha = 20;
-            txtEmail.BackColor = Color.Transparent;
-            txtEmail.Background_WidthPen = 3F;
-            txtEmail.BackgroundPen = true;
-            txtEmail.ColorBackground = Color.FromArgb(37, 52, 68);
-            txtEmail.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            txtEmail.ColorLighting = Color.FromArgb(29, 200, 238);
-            txtEmail.ColorPen_1 = Color.FromArgb(29, 200, 238);
-            txtEmail.ColorPen_2 = Color.FromArgb(37, 52, 68);
-            txtEmail.CyberTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            txtEmail.Font = new Font("Arial", 15F);
-            txtEmail.ForeColor = Color.FromArgb(245, 245, 245);
-            txtEmail.Lighting = false;
-            txtEmail.LinearGradientPen = false;
-            txtEmail.Location = new Point(162, 297);
-            txtEmail.Name = "txtEmail";
-            txtEmail.PenWidth = 15;
-            txtEmail.RGB = false;
-            txtEmail.Rounding = true;
-            txtEmail.RoundingInt = 60;
-            txtEmail.Size = new Size(669, 60);
-            txtEmail.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            txtEmail.TabIndex = 2;
-            txtEmail.Tag = "Cyber";
-            txtEmail.TextButton = "4";
-            txtEmail.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            txtEmail.Timer_RGB = 300;
-            // 
-            // txtSenha
-            // 
-            txtSenha.Alpha = 20;
-            txtSenha.BackColor = Color.Transparent;
-            txtSenha.Background_WidthPen = 3F;
-            txtSenha.BackgroundPen = true;
-            txtSenha.ColorBackground = Color.FromArgb(37, 52, 68);
-            txtSenha.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            txtSenha.ColorLighting = Color.FromArgb(29, 200, 238);
-            txtSenha.ColorPen_1 = Color.FromArgb(29, 200, 238);
-            txtSenha.ColorPen_2 = Color.FromArgb(37, 52, 68);
-            txtSenha.CyberTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            txtSenha.Font = new Font("Arial", 15F);
-            txtSenha.ForeColor = Color.FromArgb(245, 245, 245);
-            txtSenha.Lighting = false;
-            txtSenha.LinearGradientPen = false;
-            txtSenha.Location = new Point(162, 211);
-            txtSenha.Name = "txtSenha";
-            txtSenha.PenWidth = 15;
-            txtSenha.RGB = false;
-            txtSenha.Rounding = true;
-            txtSenha.RoundingInt = 60;
-            txtSenha.Size = new Size(669, 60);
-            txtSenha.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            txtSenha.TabIndex = 1;
-            txtSenha.Tag = "Cyber";
-            txtSenha.TextButton = "3";
-            txtSenha.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            txtSenha.Timer_RGB = 300;
-            // 
-            // txtNome
-            // 
-            txtNome.Alpha = 20;
-            txtNome.BackColor = Color.Transparent;
-            txtNome.Background_WidthPen = 3F;
-            txtNome.BackgroundPen = true;
-            txtNome.ColorBackground = Color.FromArgb(37, 52, 68);
-            txtNome.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            txtNome.ColorLighting = Color.FromArgb(29, 200, 238);
-            txtNome.ColorPen_1 = Color.FromArgb(29, 200, 238);
-            txtNome.ColorPen_2 = Color.FromArgb(37, 52, 68);
-            txtNome.CyberTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            txtNome.Font = new Font("Arial", 15F);
-            txtNome.ForeColor = Color.FromArgb(245, 245, 245);
-            txtNome.Lighting = false;
-            txtNome.LinearGradientPen = false;
-            txtNome.Location = new Point(162, 126);
-            txtNome.Name = "txtNome";
-            txtNome.PenWidth = 15;
-            txtNome.RGB = false;
-            txtNome.Rounding = true;
-            txtNome.RoundingInt = 60;
-            txtNome.Size = new Size(669, 60);
-            txtNome.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            txtNome.TabIndex = 0;
-            txtNome.Tag = "Cyber";
-            txtNome.TextButton = "2";
-            txtNome.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            txtNome.Timer_RGB = 300;
-            // 
             // txtId
             // 
             txtId.Alpha = 20;
@@ -336,23 +249,139 @@
             txtId.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             txtId.Timer_RGB = 300;
             // 
+            // txtEmail
+            // 
+            txtEmail.Alpha = 20;
+            txtEmail.BackColor = Color.Transparent;
+            txtEmail.Background_WidthPen = 3F;
+            txtEmail.BackgroundPen = true;
+            txtEmail.ColorBackground = Color.FromArgb(37, 52, 68);
+            txtEmail.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            txtEmail.ColorLighting = Color.FromArgb(29, 200, 238);
+            txtEmail.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            txtEmail.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            txtEmail.CyberTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            txtEmail.Enabled = false;
+            txtEmail.Font = new Font("Arial", 15F);
+            txtEmail.ForeColor = Color.FromArgb(245, 245, 245);
+            txtEmail.Lighting = false;
+            txtEmail.LinearGradientPen = false;
+            txtEmail.Location = new Point(162, 297);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PenWidth = 15;
+            txtEmail.RGB = false;
+            txtEmail.Rounding = true;
+            txtEmail.RoundingInt = 60;
+            txtEmail.Size = new Size(669, 60);
+            txtEmail.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            txtEmail.TabIndex = 2;
+            txtEmail.Tag = "Cyber";
+            txtEmail.TextButton = "4";
+            txtEmail.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            txtEmail.Timer_RGB = 300;
+            // 
+            // txtSenha
+            // 
+            txtSenha.Alpha = 20;
+            txtSenha.BackColor = Color.Transparent;
+            txtSenha.Background_WidthPen = 3F;
+            txtSenha.BackgroundPen = true;
+            txtSenha.ColorBackground = Color.FromArgb(37, 52, 68);
+            txtSenha.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            txtSenha.ColorLighting = Color.FromArgb(29, 200, 238);
+            txtSenha.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            txtSenha.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            txtSenha.CyberTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            txtSenha.Enabled = false;
+            txtSenha.Font = new Font("Arial", 15F);
+            txtSenha.ForeColor = Color.FromArgb(245, 245, 245);
+            txtSenha.Lighting = false;
+            txtSenha.LinearGradientPen = false;
+            txtSenha.Location = new Point(162, 211);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PenWidth = 15;
+            txtSenha.RGB = false;
+            txtSenha.Rounding = true;
+            txtSenha.RoundingInt = 60;
+            txtSenha.Size = new Size(669, 60);
+            txtSenha.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            txtSenha.TabIndex = 1;
+            txtSenha.Tag = "Cyber";
+            txtSenha.TextButton = "3";
+            txtSenha.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            txtSenha.Timer_RGB = 300;
+            // 
+            // txtNome
+            // 
+            txtNome.Alpha = 20;
+            txtNome.BackColor = Color.Transparent;
+            txtNome.Background_WidthPen = 3F;
+            txtNome.BackgroundPen = true;
+            txtNome.ColorBackground = Color.FromArgb(37, 52, 68);
+            txtNome.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            txtNome.ColorLighting = Color.FromArgb(29, 200, 238);
+            txtNome.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            txtNome.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            txtNome.CyberTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            txtNome.Enabled = false;
+            txtNome.Font = new Font("Arial", 15F);
+            txtNome.ForeColor = Color.FromArgb(245, 245, 245);
+            txtNome.Lighting = false;
+            txtNome.LinearGradientPen = false;
+            txtNome.Location = new Point(162, 126);
+            txtNome.Name = "txtNome";
+            txtNome.PenWidth = 15;
+            txtNome.RGB = false;
+            txtNome.Rounding = true;
+            txtNome.RoundingInt = 60;
+            txtNome.Size = new Size(669, 60);
+            txtNome.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            txtNome.TabIndex = 0;
+            txtNome.Tag = "Cyber";
+            txtNome.TextButton = "2";
+            txtNome.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            txtNome.Timer_RGB = 300;
+            // 
+            // dgvUsuarios
+            // 
+            dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUsuarios.Location = new Point(172, 525);
+            dgvUsuarios.Name = "dgvUsuarios";
+            dgvUsuarios.RowHeadersWidth = 62;
+            dgvUsuarios.Size = new Size(1060, 194);
+            dgvUsuarios.TabIndex = 6;
+            // 
+            // btnEditar
+            // 
+            btnEditar.BackColor = SystemColors.ActiveCaption;
+            btnEditar.Location = new Point(399, 44);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(112, 34);
+            btnEditar.TabIndex = 9;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
+            // 
             // FrmUsuario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1285, 669);
+            ClientSize = new Size(1346, 821);
+            Controls.Add(btnEditar);
+            Controls.Add(dgvUsuarios);
             Controls.Add(btnExcluir);
             Controls.Add(btnSalvar);
             Controls.Add(btnCancelar);
+            Controls.Add(btnVoltar);
             Controls.Add(btnNovo);
             Controls.Add(cyberGroupBox1);
-            Controls.Add(btnVoltar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmUsuarios";
             cyberGroupBox1.ResumeLayout(false);
             cyberGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
             ResumeLayout(false);
         }
 
@@ -372,5 +401,7 @@
         private ReaLTaiizor.Controls.LabelEdit labelEdit2;
         private ReaLTaiizor.Controls.CyberTextBox txtId;
         private ReaLTaiizor.Controls.CyberTextBox txtNome;
+        private DataGridView dgvUsuarios;
+        private Button btnEditar;
     }
 }
