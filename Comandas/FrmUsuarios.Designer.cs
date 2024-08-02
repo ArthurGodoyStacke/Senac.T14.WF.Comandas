@@ -350,6 +350,7 @@
             dgvUsuarios.RowHeadersWidth = 62;
             dgvUsuarios.Size = new Size(1060, 194);
             dgvUsuarios.TabIndex = 6;
+            dgvUsuarios.CellClick += dgvUsuarios_CellClick;
             // 
             // btnEditar
             // 
@@ -379,6 +380,7 @@
             Name = "FrmUsuario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmUsuarios";
+            Load += FrmUsuario_Load;
             cyberGroupBox1.ResumeLayout(false);
             cyberGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();

@@ -58,9 +58,9 @@ namespace Comandas
         private void limparCampos()
         {
             txtId.TextButton = string.Empty;
-            txtNome.Text = string.Empty;
-            txtEmail.Text = string.Empty;
-            txtSenha.Text = string.Empty;
+            txtNome.TextButton = string.Empty;
+            txtEmail.TextButton = string.Empty;
+            txtSenha.TextButton = string.Empty;
 
         }
 
@@ -137,6 +137,50 @@ namespace Comandas
         {
             // in
             ehNovo = false;
+            habilitarCampos();
+        }
+
+        private void FrmUsuario_Load(object sender, EventArgs e)
+        {
+            CarregarUsuarios();
+        }
+
+        private void CarregarUsuarios()
+        {
+            //conectar no banco
+            using (var banco = new AppDbContext())
+            {
+                //realizar consulta na tebela usuarios
+                var ususarios = banco.Usuarios.ToList();
+                //Popular os dados do grid(dataGridView)
+                dgvUsuarios.DataSource = ususarios;
+
+            }
+
+
+        }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            // verifica se o indice da linha é maior igual a 0
+            // saber se existe uma linha selecionada 
+
+            if(e.RowIndex >= 0) 
+            {
+               
+                //obter dados da linha
+                MessageBox.Show("Linha selecionada " + (e.RowIndex + 1));
+                var id = dgvUsuarios.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+                var nome = dgvUsuarios.Rows[e.RowIndex].Cells["Nome"].Value.ToString();
+                var email = dgvUsuarios.Rows[e.RowIndex].Cells["Email"].Value.ToString();
+                var senha = dgvUsuarios.Rows[e.RowIndex].Cells["Senha"].Value.ToString();
+
+                txtId.TextButton = id;
+                txtNome.TextButton = nome;
+                txtEmail.TextButton = email;
+                txtSenha.TextButton = senha;
+            }
         }
     }
 }
