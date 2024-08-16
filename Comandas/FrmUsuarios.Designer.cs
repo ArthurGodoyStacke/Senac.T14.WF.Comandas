@@ -92,6 +92,7 @@
             // btnSalvar
             // 
             btnSalvar.BackColor = SystemColors.ActiveCaption;
+            btnSalvar.Enabled = false;
             btnSalvar.Location = new Point(526, 44);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(112, 34);
@@ -114,22 +115,26 @@
             // btnExcluir
             // 
             btnExcluir.BackColor = SystemColors.ActiveCaption;
+            btnExcluir.Enabled = false;
             btnExcluir.Location = new Point(644, 44);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(112, 34);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnCancelar
             // 
             btnCancelar.BackColor = SystemColors.ActiveCaption;
+            btnCancelar.Enabled = false;
             btnCancelar.Location = new Point(762, 44);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(112, 34);
             btnCancelar.TabIndex = 4;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // cyberGroupBox1
             // 
@@ -355,6 +360,7 @@
             // btnEditar
             // 
             btnEditar.BackColor = SystemColors.ActiveCaption;
+            btnEditar.Enabled = false;
             btnEditar.Location = new Point(399, 44);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(112, 34);

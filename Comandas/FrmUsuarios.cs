@@ -52,6 +52,11 @@ namespace Comandas
             listarUsuarios();
 
             limparCampos();
+            btnNovo.Enabled = true;
+            btnEditar.Enabled = false;
+            btnSalvar.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnCancelar.Enabled = false;
 
         }
 
@@ -138,6 +143,11 @@ namespace Comandas
             // in
             ehNovo = false;
             habilitarCampos();
+            btnNovo.Enabled = false;
+            btnSalvar.Enabled = true;
+            btnEditar.Enabled = false;
+            btnCancelar.Enabled = true;
+            btnExcluir.Enabled = false;
         }
 
         private void FrmUsuario_Load(object sender, EventArgs e)
@@ -166,9 +176,9 @@ namespace Comandas
             // verifica se o indice da linha é maior igual a 0
             // saber se existe uma linha selecionada 
 
-            if(e.RowIndex >= 0) 
+            if (e.RowIndex >= 0)
             {
-               
+
                 //obter dados da linha
                 MessageBox.Show("Linha selecionada " + (e.RowIndex + 1));
                 var id = dgvUsuarios.Rows[e.RowIndex].Cells["Id"].Value.ToString();
@@ -180,7 +190,61 @@ namespace Comandas
                 txtNome.TextButton = nome;
                 txtEmail.TextButton = email;
                 txtSenha.TextButton = senha;
+
+                btnEditar.Enabled = true;
+                btnNovo.Enabled = false;
+                btnSalvar.Enabled = false;
+                btnCancelar.Enabled = false;
+                btnExcluir.Enabled = true;
+
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+            btnNovo.Enabled = true;
+            btnEditar.Enabled = false;
+            btnSalvar.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnCancelar.Enabled = false;
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var idUsuario = Convert.ToInt32(txtId.TextButton);
+            ExcluirUsuario(idUsuario);
+            listarUsuarios();
+            limparCampos();
+            btnNovo.Enabled = true;
+            btnEditar.Enabled = false;
+            btnSalvar.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnCancelar.Enabled = false;
+            MessageBox.Show("Usuário excluído com sucesso");
+        }
+
+        private void ExcluirUsuario(int idUsuario)
+
+        {
+            using (var banco = new AppDbContext())
+            {
+                var usuario = banco
+                .Usuarios
+                    .First(u => u.Id
+                    .Equals(idUsuario)); // SELECT * FROM usuarios WHERE id = ?
+
+                banco.Usuarios.Remove(usuario);
+                //gera slq DELETE FROM usuarios WHERE id = ?
+                // confirmar a exclusão
+              
+                banco.SaveChanges();
+            }
+            // conectar no banco de dados 
+            //consultar o usuario
+            //avisar o banco que estou excluindo 
+            // confirmar a exclusão
         }
     }
 }
