@@ -26,7 +26,7 @@ namespace Comandas
         private void btnCardapio_Click(object sender, EventArgs e)
         {
             //criar o formulário e exibe
-            new FrmCardapio().ShowDialog();
+            new FrmCardapioCad().ShowDialog();
         }
 
         private void btnComanda_Click(object sender, EventArgs e)

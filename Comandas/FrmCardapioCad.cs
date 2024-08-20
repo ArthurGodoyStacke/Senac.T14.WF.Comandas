@@ -17,9 +17,24 @@ namespace Comandas
             InitializeComponent();
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cyberTextBox4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cyberTextBox3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cyberTextBox1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
