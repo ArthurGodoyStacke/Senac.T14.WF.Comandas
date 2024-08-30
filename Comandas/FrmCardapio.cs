@@ -19,7 +19,8 @@ namespace Comandas
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            new FrmCardapioCad().ShowDialog();
+            var ehNovo = true;
+            new FrmCardapioCad(ehNovo).ShowDialog();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -34,7 +35,9 @@ namespace Comandas
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            new FrmCardapioCad().ShowDialog();
+            var ehNovo = false;
+            new FrmCardapioCad(ehNovo).ShowDialog();
+
         }
     }
 }

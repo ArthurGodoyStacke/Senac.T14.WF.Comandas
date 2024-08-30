@@ -12,8 +12,10 @@ namespace Comandas
 {
     public partial class FrmCardapioCad : Form
     {
-        public FrmCardapioCad()
+        bool ehNovo = false;
+        public FrmCardapioCad(bool acao)
         {
+            ehNovo = acao;
             InitializeComponent();
         }
 
@@ -35,6 +37,45 @@ namespace Comandas
         private void cyberTextBox1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            // se o form está em modo de inclusão 
+            if (ehNovo)
+            {
+                // Executa o método que realiza o INSERT na tabela
+                AdicionarCardapio();
+            }
+            else
+            { // Executa o método que realiza o UPDATE na tabela
+                AtualizarCardapio();
+            }// Fecha a teal atual (FrmCardapioCad)
+            Close();
+        }
+
+        private void AtualizarCardapio()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AdicionarCardapio()
+        {
+            using (var banco = new AppDbContext())
+            {
+
+                var novoCardapio = new Cardapio()
+                {
+                    Titulo = txtTitulo.TextButton,
+                    Descricao = txtDescricao.TextButton,
+                    Preco = decimal.Parse (txtPreco.TextButton),
+                    PossuiPreparo = chkPreparo.Checked,
+
+                };
+                banco.Cardapios.Add(novoCardapio);
+                banco.SaveChanges();
+
+            }
         }
     }
 }

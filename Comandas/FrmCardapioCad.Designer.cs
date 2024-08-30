@@ -50,7 +50,7 @@
             btnCancelar.ColorBackground = Color.Red;
             btnCancelar.ColorBackground_1 = Color.FromArgb(37, 52, 68);
             btnCancelar.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            btnCancelar.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            btnCancelar.ColorBackground_Pen = Color.FromArgb(255, 192, 128);
             btnCancelar.ColorLighting = Color.FromArgb(29, 200, 238);
             btnCancelar.ColorPen_1 = Color.FromArgb(37, 52, 68);
             btnCancelar.ColorPen_2 = Color.FromArgb(41, 63, 86);
@@ -272,7 +272,7 @@
             btnSalvar.ColorBackground = Color.Lime;
             btnSalvar.ColorBackground_1 = Color.FromArgb(37, 52, 68);
             btnSalvar.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            btnSalvar.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            btnSalvar.ColorBackground_Pen = Color.FromArgb(255, 192, 128);
             btnSalvar.ColorLighting = Color.FromArgb(29, 200, 238);
             btnSalvar.ColorPen_1 = Color.FromArgb(37, 52, 68);
             btnSalvar.ColorPen_2 = Color.FromArgb(41, 63, 86);
@@ -301,6 +301,7 @@
             btnSalvar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnSalvar.Timer_Effect_1 = 5;
             btnSalvar.Timer_RGB = 300;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // crownLabel1
             // 
