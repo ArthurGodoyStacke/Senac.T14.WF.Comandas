@@ -30,11 +30,11 @@
         {
             btnVoltar = new ReaLTaiizor.Controls.CyberButton();
             txtPesquisar = new ReaLTaiizor.Controls.CyberTextBox();
-            dataGridView1 = new DataGridView();
+            dgvCardapio = new DataGridView();
             btnEditar = new ReaLTaiizor.Controls.CyberButton();
             btnExcluir = new ReaLTaiizor.Controls.CyberButton();
             btnNovo = new ReaLTaiizor.Controls.CyberButton();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCardapio).BeginInit();
             SuspendLayout();
             // 
             // btnVoltar
@@ -108,14 +108,14 @@
             txtPesquisar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             txtPesquisar.Timer_RGB = 300;
             // 
-            // dataGridView1
+            // dgvCardapio
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 180);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(889, 225);
-            dataGridView1.TabIndex = 3;
+            dgvCardapio.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCardapio.Location = new Point(12, 180);
+            dgvCardapio.Name = "dgvCardapio";
+            dgvCardapio.RowHeadersWidth = 62;
+            dgvCardapio.Size = new Size(889, 225);
+            dgvCardapio.TabIndex = 3;
             // 
             // btnEditar
             // 
@@ -248,14 +248,14 @@
             Controls.Add(btnNovo);
             Controls.Add(btnExcluir);
             Controls.Add(btnEditar);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvCardapio);
             Controls.Add(txtPesquisar);
             Controls.Add(btnVoltar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmCardapio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmCardapioCad";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCardapio).EndInit();
             ResumeLayout(false);
         }
 
@@ -263,7 +263,7 @@
 
         private ReaLTaiizor.Controls.CyberButton btnVoltar;
         private ReaLTaiizor.Controls.CyberTextBox txtPesquisar;
-        private DataGridView dataGridView1;
+        private DataGridView dgvCardapio;
         private ReaLTaiizor.Controls.CyberButton btnEditar;
         private ReaLTaiizor.Controls.CyberButton btnExcluir;
         private ReaLTaiizor.Controls.CyberButton btnNovo;

@@ -56,9 +56,18 @@ namespace Comandas
 
         private void AtualizarCardapio()
         {
-            throw new NotImplementedException();
-        }
-
+            using(var banco = new AppDbContext())
+            {
+                var cardapio = banco.Cardapios.FirstOrDefault(c => c.Id == int.Parse(txtId.TextButton)); 
+                
+                cardapio.Titulo = txtTitulo.TextButton;
+                cardapio.Descricao = txtDescricao.TextButton;
+                cardapio.Preco = decimal.Parse(txtPreco.TextButton);
+                cardapio.PossuiPreparo = chkPreparo.Checked;
+                banco.SaveChanges();
+            }
+            }
+            
         private void AdicionarCardapio()
         {
             using (var banco = new AppDbContext())
