@@ -13,10 +13,39 @@ namespace Comandas
     public partial class FrmCardapioCad : Form
     {
         bool ehNovo = false;
+
+        public int ID { get; }
+        public string? TITULO { get; }
+        public string? DESCRICAO { get; }
+        public decimal PRECO { get; }
+        public bool POSSUIPREPARO { get; }
+
         public FrmCardapioCad(bool acao)
         {
             ehNovo = acao;
             InitializeComponent();
+        }
+
+        public FrmCardapioCad(bool acao, int iD, string? tITULO, string? dESCRICAO, decimal pRECO, bool pOSSUIPREPARO) : this(acao)
+        {
+            ehNovo = acao;
+            InitializeComponent();
+            ID = iD;
+            TITULO = tITULO;
+            DESCRICAO = dESCRICAO;
+            PRECO = pRECO;
+            POSSUIPREPARO = pOSSUIPREPARO;
+
+            PopularCampos();
+        }
+
+        private void PopularCampos()
+        {
+            txtId.TextButton = ID.ToString();
+            txtTitulo.TextButton = TITULO;
+            txtDescricao.TextButton = DESCRICAO;
+            txtPreco.TextButton = PRECO.ToString();
+            chkPreparo.Checked = POSSUIPREPARO;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

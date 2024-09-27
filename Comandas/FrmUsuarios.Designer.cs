@@ -356,6 +356,7 @@
             dgvUsuarios.Size = new Size(1060, 194);
             dgvUsuarios.TabIndex = 6;
             dgvUsuarios.CellClick += dgvUsuarios_CellClick;
+            dgvUsuarios.CellContentClick += dgvUsuarios_CellContentClick;
             // 
             // btnEditar
             // 

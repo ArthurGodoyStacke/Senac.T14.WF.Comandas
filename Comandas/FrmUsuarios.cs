@@ -238,13 +238,18 @@ namespace Comandas
                 banco.Usuarios.Remove(usuario);
                 //gera slq DELETE FROM usuarios WHERE id = ?
                 // confirmar a exclusão
-              
+
                 banco.SaveChanges();
             }
             // conectar no banco de dados 
             //consultar o usuario
             //avisar o banco que estou excluindo 
             // confirmar a exclusão
+        }
+
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
